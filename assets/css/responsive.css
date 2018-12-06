@@ -57,7 +57,7 @@
 	.destak_right {
 		float: none;
 		overflow: hidden;
-		width: 606px;
+		width: 100%;
 		margin: 0 auto;
 	}
 	/* --- menu --- */
