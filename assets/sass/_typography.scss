@@ -1,0 +1,117 @@
+// =============================================================================
+// Vars and Mixins
+// =============================================================================
+
+@mixin title{
+	font-size: 1.2em;
+	font-family: "museo500", arial, verdana, serif;
+	color: #560504;
+	line-height: 160%;
+}
+
+@mixin normal-text{
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 0;
+	font-weight: 100;
+	font-style: italic;
+	color: #333;
+	line-height: 170%;
+}
+
+// =============================================================================
+// Headers
+// =============================================================================
+
+h1, h2, h3, h4 { @include title; }
+h1{
+	font-family: 'museo500';
+	border-bottom: 1px dashed #ccc;
+	font-size: 23px;
+	text-transform: uppercase;
+	color: #060;
+}
+h2{
+	width: 100%;
+	font-size: 17px;
+	margin: 10px 0 0;
+	color: #060;
+	text-transform: uppercase;
+	line-height: 120%;
+	text-shadow: 1px 1px 1px #fff;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.95);
+}
+h3{ font-size: 20px; font-family: "museo300", serif; margin: 3px 0; color: #666; }
+h4{ @extend h1; font-size: 17px; margin: 5px; border-bottom: none; }
+
+h1.principal{ padding-left: 45px; font-size: 30px; line-height: 100%; border-bottom: none; background: url("../images/ornament-titles.png") 0 0 no-repeat; }
+
+// =============================================================================
+// Text
+// =============================================================================
+
+footer{
+	span{ color: #fff;	}
+}
+
+strong{ font-size: 12px; }
+
+// =============================================================================
+// Link
+// =============================================================================
+
+a { @include normal-text; text-decoration: none; font-size:1em; color: #c0cc2a; }
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+
+// =============================================================================
+// Span
+// =============================================================================
+
+p, span{ @include normal-text; }
+
+p.destak{ font-weight: bold; font-size: 13px; }
+
+// =============================================================================
+// Buttons
+// =============================================================================
+
+.bt-1{
+	width: 95px;
+	height: 25px;
+	margin: 0 auto;
+	position: relative;
+	display: block;
+	bottom: -20px;
+	font-family: "open sans", arial, verdana, serif;
+	font-size: 12px;
+	color: #fff;
+	text-align: center;
+	line-height: 25px;
+	background: url("../images/bg-button-1.jpg") no-repeat;
+	// &:hover{ @include box-shadow(); }
+}
+.bt-2{ color: #0c6; font-size: 12px; font-style: italic; float: right; text-decoration: underline; }
+.bt-3{ position: relative; float: left; padding: 2px 4px; background-color: #e3e3e3; border: none; @include border-radius; behavior: url(css/PIE.htc); font-size: 0.7em; font-style: italic; }
+
+// =============================================================================
+// Lists
+// =============================================================================
+
+ul, ol { margin: 0 0; padding: 0; list-style-type: none; @include normal-text; color: #fff; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+// =============================================================================
+// Address
+// =============================================================================
+
+address{ @include normal-text; line-height: 150%; font-style: normal; color: #666; }
+
+// =============================================================================
+// Helpers
+// =============================================================================
+
+hr{ padding: 10px 30px; border-color: #cca247; }
+
